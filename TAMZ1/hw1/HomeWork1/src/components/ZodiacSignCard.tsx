@@ -43,7 +43,7 @@ interface ZodiacSignCardProps {
 export const ZodiacSignCard: React.FC<ZodiacSignCardProps> = 
 memo(({ selectedDate }) => {
 
-	const zodiacNames = useMemo(() => [ 
+  const zodiacNames = useMemo(() => [ 
     "kozoroh", 
     "vodnar", 
     "ryby", 
@@ -58,7 +58,7 @@ memo(({ selectedDate }) => {
     "strelec" 
   ], []); 
 
-	const breakDate = useMemo(() => [ 
+  const breakDate = useMemo(() => [ 
     21, 20, 21, 21, 21, 22, 
     23, 24, 23, 23, 23, 22 
   ], []);
