@@ -1,0 +1,7 @@
+{
+  "name": "HomeWork1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

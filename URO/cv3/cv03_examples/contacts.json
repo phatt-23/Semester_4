@@ -1,0 +1,90 @@
+[
+    {
+        "firstName": "jan",
+        "lastName": "novak",
+        "phoneNumber": "3213222/1321",
+        "postalInfo": {
+            "street": "ulice",
+            "streetNumber": "213",
+            "city": "praha",
+            "postalCode": "546 32"
+        }
+    },
+    {
+        "firstName": "alex",
+        "lastName": "xela",
+        "phoneNumber": "3213222/1321",
+        "postalInfo": {
+            "street": "ulice",
+            "streetNumber": "213",
+            "city": "praha",
+            "postalCode": "546 32"
+        }
+    },
+    {
+        "firstName": "adam",
+        "lastName": "mynar",
+        "phoneNumber": "5332456/343",
+        "postalInfo": {
+            "street": "ulice",
+            "streetNumber": "213",
+            "city": "praha",
+            "postalCode": "546 32"
+        }
+    },
+    {
+        "firstName": "jirka",
+        "lastName": "kral",
+        "phoneNumber": "385034/2980",
+        "postalInfo": {
+            "street": "ulice",
+            "streetNumber": "213",
+            "city": "praha",
+            "postalCode": "546 32"
+        }
+    },
+    {
+        "firstName": "Jan",
+        "lastName": "Novak",
+        "phoneNumber": "456456456",
+        "postalInfo": {
+            "street": "Jana Maluchy",
+            "streetNumber": "14/45",
+            "city": "Ostrava-Dubina",
+            "postalCode": "700 30"
+        }
+    },
+    {
+        "firstName": "Jan",
+        "lastName": "Novak",
+        "phoneNumber": "456456456",
+        "postalInfo": {
+            "street": "Jana Maluchy",
+            "streetNumber": "14/45",
+            "city": "Ostrava-Dubina",
+            "postalCode": "700 30"
+        }
+    },
+    {
+        "firstName": "Jan",
+        "lastName": "Novak",
+        "phoneNumber": "456456456",
+        "postalInfo": {
+            "street": "Prazska ulice",
+            "streetNumber": "324",
+            "city": "Praha Vyskovice",
+            "postalCode": "23456"
+        }
+    },
+    {
+        "firstName": "asdsd",
+        "lastName": "asdsdf",
+        "phoneNumber": "sadfasdffsdsd",
+        "postalInfo": {
+            "street": "asdfsdf",
+            "streetNumber": "sdafdsaf",
+            "city": "sadfsadf",
+            "postalCode": "sdfasdf"
+        }
+    }
+]

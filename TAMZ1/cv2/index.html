@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet"> 
+</head>
+<body>
+<ion-app>
+  <ion-header>
+	<ion-toolbar>
+	  <ion-title>Different Ionic Date Examples on Greeter Template</ion-title>
+	</ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+
+    <!-- Tlačítko a výstraha nejsou propojeny, o zobrazení se stará JS -->
+    <ion-alert id="greeter"	header="Greetings"></ion-alert>	
+    <!-- <ion-button id="greet-alert" onclick="displayGreeting()">Greet me!</ion-button> -->
+    <ion-button id="greet-alert">Greet me!</ion-button>
+
+    <ion-datetime id="date-time" show-default-buttons="true" locale="cs-CZ" done-text="OK" cancel-text="Zrušit"></ion-datetime>
+
+
+
+	<!-- <h1>Enter your name</h1> -->
+	<!-- <ion-input placeholder="e.g. John Doe" id="name"></ion-input><br> -->
+	<!--  -->
+	<!-- <ion-note>Full date &amp; Time as button only</ion-note> -->
+	<!--  -->
+	<!-- <ion-datetime-button datetime="date-time"></ion-datetime-button><br> -->
+	<!--  -->
+	<!-- <ion-note>Only date since September 2023</ion-note> -->
+	<!-- <ion-datetime min="2023-09-01" show-default-title="true" id="dateonly" presentation="date"></ion-datetime><br> -->
+	<!--  -->
+	<!-- <ion-note>Only Time with 1/4h step</ion-note> -->
+	<!-- <ion-datetime id="timeonly" presentation="time" minute-values="0,15,30,45"><ion-text slot="title">Select Time</ion-datetime><br> -->
+	<!--  -->
+  </ion-content>
+  <ion-modal>
+    <ion-datetime id="date-time" show-default-buttons="true" locale="cs-CZ" done-text="OK" cancel-text="Zrušit"></ion-datetime>
+  </ion-modal>
+</ion-app>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
+
