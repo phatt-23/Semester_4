@@ -44,12 +44,12 @@ import { useDeadlines } from './hooks/useDeadlines';
 
 setupIonicReact();
 
-export const App: React.FC = () => {
+const App: React.FC = () => {
   useEffect(() => {
-    if (isPlatform('hybrid')) {
+    if (isPlatform("hybrid")) {
       StatusBar.setOverlaysWebView({ overlay: false });
       StatusBar.setStyle({ style: Style.Default });
-    }
+    } 
   },[]);
 
   const { deadlines, selectedDate, setSelectedDate } = useDeadlines();
@@ -79,4 +79,6 @@ export const App: React.FC = () => {
     </IonApp>
   );
 }
+
+export default App;
 

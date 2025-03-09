@@ -44,6 +44,7 @@ export const CalendarEntryCard: React.FC<CalendarEntryCardProps> =
         <IonDatetime 
           id="datetime" 
           presentation="date"
+          showDefaultButtons={true}
           highlightedDates={deadlines}
           onIonChange={(event) => typeof event.detail.value === "string" &&
               onChangeSelectedDate(new Date(event.detail.value))

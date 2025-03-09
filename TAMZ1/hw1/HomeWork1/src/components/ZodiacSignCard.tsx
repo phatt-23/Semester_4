@@ -86,10 +86,8 @@ memo(({ selectedDate }) => {
         </IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
-        <div className="center">
-          <IonImg src={imagePath} alt={imagePath}></IonImg>
-          <IonText>{displayName}</IonText> 
-        </div>
+        <IonImg className="center" src={imagePath} alt={imagePath}></IonImg>
+        <IonText>{displayName}</IonText> 
       </IonCardContent>
     </IonCard>
   );

@@ -297,22 +297,19 @@ class ContactInfoFormComponent(Observer, Observable):
         # confirm button 
         missingFields = []
 
-        if not self.firstNameEntry.get():
-            missingFields.append("First Name")
-        if not self.lastNameEntry.get():
-            missingFields.append("Last Name")
-        if not self.phoneNumberEntry.get():
-            missingFields.append("Phone Number")
+        def addIfMissing(entry: tk.Entry, name): 
+            if not entry.get():
+                missingFields.append(name)
+
+        addIfMissing(self.firstNameEntry, "First Name")
+        addIfMissing(self.lastNameEntry, "Last Name")
+        addIfMissing(self.phoneNumberEntry, "Phone Number")
 
         if not self.includePostalInfo.get():
-            if not self.streetEntry.get():
-                missingFields.append("Street")
-            if not self.streetNumberEntry.get():
-                missingFields.append("Street Number")
-            if not self.cityEntry.get():
-                missingFields.append("City")
-            if not self.postalCodeEntry.get():
-                missingFields.append("Postal Code")
+            addIfMissing(self.streetEntry, "Street")
+            addIfMissing(self.streetNumberEntry, "Street Number")
+            addIfMissing(self.cityEntry, "City")
+            addIfMissing(self.postalCodeEntry, "Postal Code")
 
         return len(missingFields) > 0, "Contact Info form isn't complete", "Please fill out these fields: " + ",".join(missingFields)
 
