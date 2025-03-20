@@ -42,6 +42,7 @@ function useItemList() {
     const loadItemsFromStorageWeb = () => {
       const value = localStorage.getItem(ITEM_LIST_STORAGE_KEY);
       const parsedList = (value ? JSON.parse(value) : []) as ListItem[];
+      console.log("loaded list:", parsedList)
       setItems(prev => [...prev, ...parsedList]); 
     };
 
@@ -50,6 +51,7 @@ function useItemList() {
     else
       loadItemsFromStorageWeb(); 
   }, []);
+
 
   useEffect(() => {
     const updateStorageWeb = () => {
@@ -65,6 +67,7 @@ function useItemList() {
     else
       updateStorageWeb();
   }, [items]);
+
 
   return {
     items, 

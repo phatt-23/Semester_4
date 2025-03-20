@@ -1,10 +1,13 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 import tkinter as tk
 from tkinter import ttk
+
 root = tk.Tk()
+
 
 def hello():
     print("Ahoj!")
+
 
 hlavniMenu = tk.Menu(root)
 

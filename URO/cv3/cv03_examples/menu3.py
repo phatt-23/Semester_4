@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
+
 class MyApp:
     def __init__(self, root):
         self.root = root
@@ -13,7 +14,6 @@ class MyApp:
         self.frame = tk.Frame(self.root, width=300, height=200)
         self.frame.pack()
         self.frame.bind("<Button-3>", self.popup)
-
 
     def popup(self, event):
         print(event)

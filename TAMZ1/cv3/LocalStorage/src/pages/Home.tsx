@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonContent, IonFab, IonFabButton, IonFooter, IonHeader, IonIcon, IonPage, IonTitle, IonToolbar } from "@ionic/react";
 import { Importance, ListItem } from "../lib/types";
 import useItemList from "../hooks/useItemList";
 import ItemList from "../components/ItemList";
 import ItemForm from "../components/ItemForm";
+import { add } from "ionicons/icons";
 
 function Home() {
   const { items, addItem, removeItem, updateItem } = useItemList();
@@ -12,8 +13,11 @@ function Home() {
   const handleAddOrUpdate = (inputText: string, importance: Importance) => {
     if (!inputText.trim()) return;
 
-    if (editingItemId) {
+    console.log("editing item id:", editingItemId)
+
+    if (editingItemId !== null) {
       const editingItem = items.find(item => item.id == editingItemId);
+
       if (editingItem) {
         updateItem(editingItemId, { 
           ...editingItem, 
@@ -38,14 +42,14 @@ function Home() {
   }
 
   const handleItemEdit = (item: ListItem) => {
-    setEditingItemId(item.id);
+    setEditingItemId(prevItemId => prevItemId === item.id ? null : item.id);
   }
 
   return (
     <IonPage>
       <IonHeader translucent={true}>
         <IonToolbar>
-          <IonTitle>Local Storage</IonTitle>
+          <IonTitle>Local Storage App</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -55,13 +59,16 @@ function Home() {
           onItemEditClick={item => handleItemEdit(item)} 
           onItemRemoveClick={item => handleItemRemove(item)}
           onItemStrikethroughClick={item => handleItemStrikethrough(item)}
+          selectedEditItemId={editingItemId}
         ></ItemList>
       </IonContent>
 
-      <IonFooter translucent={true} collapse="fade">
+
+      <IonFooter collapse="fade">
         <IonToolbar>
           <ItemForm 
             onAddOrUpdate={(input, importance) => handleAddOrUpdate(input, importance)}
+            editingText={editingItemId !== null ? items.find(item => item.id === editingItemId)?.label : ""}
           ></ItemForm>
         </IonToolbar>
       </IonFooter>

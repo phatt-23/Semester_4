@@ -1,0 +1,7 @@
+{
+  "name": "http_communication",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}

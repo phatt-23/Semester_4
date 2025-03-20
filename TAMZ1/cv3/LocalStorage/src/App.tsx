@@ -34,15 +34,20 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import { useEffect } from 'react';
 import { StatusBar, Style } from '@capacitor/status-bar';
+import { Keyboard, KeyboardResize } from '@capacitor/keyboard';
 
 setupIonicReact();
+
 
 const App: React.FC = () => {
   useEffect(() => {
     if (isPlatform("hybrid")) {
       StatusBar.setOverlaysWebView({ overlay: false });
-      StatusBar.setStyle({ style: Style.Default });
+      StatusBar.setStyle({ style: Style.Light });
     } 
+
+    Keyboard.setScroll({ isDisabled: false });
+    Keyboard.setResizeMode({ mode: KeyboardResize.Native });
   },[]);
 
   return (
@@ -52,6 +57,7 @@ const App: React.FC = () => {
           <Route path="/" exact={true}>
             <Redirect to="/home" />
           </Route>
+
           <Route path="/home" exact={true}>
             <Home />
           </Route>
