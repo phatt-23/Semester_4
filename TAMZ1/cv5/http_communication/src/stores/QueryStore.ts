@@ -3,14 +3,12 @@ import { create } from "zustand";
 type QueryStoreState = {
   url?: string
   login?: string 
-  // tokens: Map<string, string>
 }
 
 type QueryStoreActions = {
   setUrl: (url: string) => void
   setLogin: (login: string) => void
 }
-
 
 export const useQueryStore = create<QueryStoreState & QueryStoreActions>()(
   (set) => ({
