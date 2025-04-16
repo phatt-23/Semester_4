@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP App</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@7.0.0/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@7.0.0/dist/ionic/ionic.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@7.0.0/css/ionic.bundle.css" />
+</head>
+<body>
+<ion-page>
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>CNB Exchange Rate</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-card>
+            <ion-card-header>
+                <ion-title>Inputed<ion-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-input id="currInput" label="CZK" type="number">
+                </ion-input>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-title>
+                    Select Date
+                </ion-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-datetime-button id="datetimeButton" datetime="datetime"></ion-datetime-button>
+                <ion-modal>
+                      <ion-datetime id="datetime"></ion-datetime>
+                </ion-modal>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-title>
+                    Select Currency
+                </ion-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-select id="currSelect" label="Currency">
+                </ion-select>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-title>Converted<ion-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-input id="currOutput" label="CUR" readonly="true">
+                </ion-input>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+</ion-page>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const date = new Date().toISOString().split("T")[0]
+
+        const response = await fetch("http://linedu.vsb.cz/~mor03/TAMZ/cnb_json.php"
+            + "?"
+            + `date: ${date}`
+        )
+
+        const json = await response.json();
+        console.log(json)
+
+        const data = json.data
+        console.log("DATA:", data)
+
+        const list = document.getElementById("currSelect")
+
+
+        data.forEach(d => {
+            card = document.createElement("ion-select-option")
+            card.innerHTML = (`
+                <ion-title>${d.country_label}</ion-title>
+                <ion-label>${d.curr_label}</ion-label>
+                <ion-label>${d.code}</ion-label>
+            `)
+
+            list.appendChild(card)
+        })
+    })
+
+    const currInput = document.getElementById("currInput")
+    const currOutput = document.getElementById("currOutput")
+    const currSelect = document.getElementById("currSelect")
+
+    const selectedCurr = null;
+
+    currInput.addEventListener("ionInput", (event) => {
+        selectedCurr.
+        event.detail.value
+    })
+</script>
+</body>
+</html>

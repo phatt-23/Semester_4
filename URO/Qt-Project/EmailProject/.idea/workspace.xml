@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f3f1ead-f141-42f7-a36d-e8c2ca6fbdc8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmailProject.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mainwindow.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../qt/Form/Form/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../qt/Form/Form/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../qt/Form/Form/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../qt/Form/Form/mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../qt/Form/Form/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAMZ1/cv4/bmi_calculator/src/components/CalcDetailModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAMZ1/cv4/bmi_calculator/src/components/CalcDetailModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/capacitor.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/capacitor.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAMZ1/cv5/http_communication/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../py-project" beforeDir="false" afterPath="$PROJECT_DIR$/../../py-project" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2vcuhXf8Wo5X6pq56RkN7V9O5ep" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/phatt/School/sem4/URO/Qt-Project/QtProject-EmailClient",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f3f1ead-f141-42f7-a36d-e8c2ca6fbdc8" name="Changes" comment="" />
+      <created>1744456803629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744456803629</updated>
+      <workItem from="1744456804438" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

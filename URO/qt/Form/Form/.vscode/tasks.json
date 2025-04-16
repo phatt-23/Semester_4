@@ -1,0 +1,16 @@
+{
+    "tasks": [
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "make -C cmake && ./cmake/Form",
+            "detail": "Task to build and run the program using Makefile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}

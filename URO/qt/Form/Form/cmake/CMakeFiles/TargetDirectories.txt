@@ -1,0 +1,9 @@
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/Form.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/edit_cache.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/rebuild_cache.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/list_install_components.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/install.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/install/local.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/install/strip.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/Form_autogen_timestamp_deps.dir
+/home/phatt/School/sem4/URO/qt/Form/Form/cmake/CMakeFiles/Form_autogen.dir

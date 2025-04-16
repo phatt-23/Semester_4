@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <form id="video-upload-form">
+  <h2>Upload Video</h2>
+
+  <label>Video Title</label>
+  <input type="text" name="title" required />
+
+  <label>Description</label>
+  <textarea name="description"></textarea>
+
+  <label>Channel</label>
+  <select name="channel_id">
+    <!-- Channels will be dynamically loaded -->
+  </select>
+
+  <label>Thumbnail</label>
+  <input type="file" name="thumbnail" accept="image/*" />
+
+  <label>Video File</label>
+  <input type="file" name="video_file" accept="video/*" />
+
+  <label>Visibility</label>
+  <select name="visibility">
+    <option value="public">Public</option>
+    <option value="unlisted">Unlisted</option>
+    <option value="private">Private</option>
+    <option value="draft">Draft</option>
+  </select>
+
+  <label>Monetize?</label>
+  <input type="checkbox" name="is_monetized" checked />
+
+  <fieldset>
+    <legend>Chapters</legend>
+    <div id="chapters-list">
+      <!-- Dynamic list of chapters -->
+    </div>
+    <button type="button" onclick="addChapter()">Add Chapter</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>Categories</legend>
+    <select name="categories" multiple>
+      <!-- Dynamically populated -->
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Playlists</legend>
+    <select name="playlists" multiple>
+      <!-- Dynamically populated -->
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Advertisements</legend>
+    <div id="ads-list">
+      <!-- Ad selection and timing -->
+    </div>
+    <button type="button" onclick="addAd()">Add Advertisement</button>
+  </fieldset>
+
+  <button type="submit">Upload Video</button>
+</form>
+
+</body>
+
+</html>

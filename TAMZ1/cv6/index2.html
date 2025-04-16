@@ -1,0 +1,15 @@
+<script>
+  const eventSource = new EventSource("https://www.example.com/sse-endpoint");
+
+  eventSource.onopen = () => {
+    console.log("SSE connection opened.");
+  };
+
+  eventSource.onmessage = (e) => {
+    console.log("Received data:", e.data);
+  };
+
+  eventSource.onerror = (e) => {
+    console.error("SSE Error:", e);
+  };
+</script>

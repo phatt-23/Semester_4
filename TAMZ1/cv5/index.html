@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTTP App</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@7.0.0/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@7.0.0/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@7.0.0/css/ionic.bundle.css" />
+  <style>
+    ion-content {
+      --background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-left: 20px;
+    }
+
+    ion-card {
+      max-width: 600px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 10px;
+      margin: 0 auto;
+      margin-block: 16px;
+    }
+
+    ion-card-title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    ion-card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    ion-button {
+      --background: #3880ff;
+      --border-radius: 8px;
+      --padding: 12px;
+      font-size: 1em;
+    }
+
+    ion-button:hover {
+      --background: #3171e0;
+    }
+
+    ion-input,
+    ion-textarea {
+      --background: white;
+      --border-radius: 8px;
+      --padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>HTTP</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content fullscreen class="ion-padding">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Query</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-input id="url" label="URL" placeholder="Enter URL"></ion-input>
+            <ion-input id="login" label="Login" placeholder="Enter Login"></ion-input>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Response</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-textarea auto-grow="true" id="secretData" readonly label="Received Secret Data" label-placement="stacked"
+              placeholder="Here will be the received secret data"></ion-textarea>
+            <ion-textarea auto-grow="true" id="decodedSecretData" readonly label="Decoded Secret Data" label-placement="stacked"
+              placeholder="Here will be the decoded received secret data"></ion-textarea>
+            <ion-textarea auto-grow="true" id="finalMessage" readonly label="Final Message" label-placement="stacked"
+              placeholder="Here will be the final message"></ion-textarea>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-content>
+            <ion-button expand="block" onclick="handleGetCode('get')">Get Code (GET)</ion-button>
+            <ion-button expand="block" onclick="handleGetCode('post')">Get Code (POST)</ion-button>
+            <ion-button id="sendButton" expand="block" onclick="handleSendCode()" disabled="true">Send Code</ion-button>
+          </ion-card-content>
+        </ion-card>
+    </ion-content>
+  </ion-app>
+
+  <script>
+    let secretData = "";
+    let decodedSecretData = "";
+    let finalMessage = "";
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("url").value = "https://homel.vsb.cz/~mor03/TAMZ/TAMZ22.php";
+      document.getElementById("login").value = "TRA0163";
+    });
+
+    async function handleGetCode(method) {
+      const url = document.getElementById("url").value;
+      const login = document.getElementById("login").value;
+
+      if (!login) {
+        alert("Please, provide login!");
+        return;
+      }
+
+      if (method === "get") {
+        const response = await fetch(`${url}?user=${login}&timestamp=${Date.now()}`);
+        secretData = await response.text();
+      } else {
+        const formData = new URLSearchParams({user: login, timestamp: Date.now().toString()});
+        const response = await fetch(url, {
+          method: "POST",
+          body: formData,
+          headers: {"Content-Type": "application/x-www-form-urlencoded"}
+        });
+        secretData = await response.text();
+      }
+
+      decodedSecretData = atob(secretData);
+      document.getElementById("secretData").value = secretData;
+      document.getElementById("decodedSecretData").value = decodedSecretData;
+
+      document.getElementById("sendButton").disabled = false
+    }
+
+    async function handleSendCode() {
+      const url = document.getElementById("url").value;
+      const response = await fetch(url, {
+        method: "POST",
+        body: new URLSearchParams({timestamp: Date.now().toString()}),
+        headers: {"Authorization": `Bearer ${secretData}`}
+      });
+
+      finalMessage = await response.text();
+      document.getElementById("finalMessage").value = finalMessage;
+    }
+  </script>
+
+</body>
+
+</html>
+

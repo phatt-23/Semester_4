@@ -1,0 +1,41 @@
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-left: 20px;
+}
+
+ion-card {
+  max-width: 800px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-block: 16px;
+}
+
+ion-card-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+ion-button {
+  --border-radius: 8px;
+  --padding: 12px;
+  font-size: 1em;
+}
+
+ion-input,
+ion-textarea {
+  --background: white;
+  --border-radius: 8px;
+  --padding: 10px;
+}

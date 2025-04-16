@@ -23,7 +23,6 @@ type CalcDetailModalProps = {
   dismiss: () => void 
 }
 
-
 function CalcDetailModal({ item, dismiss }: CalcDetailModalProps)
 {
   const bmi = calculateBmi(item.calcInfo.weight as number, item.calcInfo.height as number)
